@@ -1,0 +1,155 @@
+/* ===== Base y paleta ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --p1: #c8be19; /* amarillo claro */
+  --p2: #8a6f00; /* mostaza */
+  --p3: #6b672e; /* oliva */
+  --p4: #404c34; /* verde oscuro */
+  --p5: #000000; /* negro */
+  --text: #0b0b0b;
+}
+html,
+body {
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background: var(--p1);
+  line-height: 1.5;
+}
+
+/* Utilidades */
+.block {
+  border: 3px solid var(--p5);
+  border-radius: 10px;
+  padding: 12px;
+}
+.b-p1 {
+  background: var(--p1);
+}
+.b-p2 {
+  background: var(--p2);
+}
+.b-p3 {
+  background: var(--p3);
+}
+.b-p4 {
+  background: var(--p4);
+}
+.on-dark {
+  color: #fff;
+}
+.hlink {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+}
+
+/* Header */
+.header {
+  width: min(1200px, 92vw);
+  margin: 16px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  font-weight: 900;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Nav (sin enlaces) */
+.nav {
+  width: min(1200px, 92vw);
+  margin: 8px auto;
+}
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+.pill {
+  padding: 6px 10px;
+  border: 2px solid var(--p5);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Layout principal con Flex */
+.wrap {
+  width: min(1200px, 92vw);
+  margin: 8px auto 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 2;
+}
+.article-header {
+  border: 2px solid var(--p5);
+  border-radius: 8px;
+}
+.main {
+  border: 2px solid var(--p5);
+  border-radius: 8px;
+}
+.section {
+  border: 2px solid var(--p5);
+  border-radius: 8px;
+  padding: 40px;
+}
+
+/* Sidebar con tres bloques (dos pequeños arriba, uno grande abajo) */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.aside {
+  border: 2px solid var(--p5);
+  border-radius: 8px;
+  padding: 30px;
+}
+.small {
+  min-height: 100px;
+}
+.large {
+  min-height: 220px;
+}
+
+/* Footer */
+.footer {
+  width: min(1200px, 92vw);
+  margin: 0 auto 24px;
+}
+
+/* Tipografía */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+/* Responsive: dos columnas */
+@media (min-width: 900px) {
+  .wrap {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .sidebar {
+    position: sticky;
+    top: 16px;
+  }
+}
